@@ -37,13 +37,14 @@ console.log(sisName);
 // 4: Write a function named square that takes in one number, and returns the square of that number.
 // BONUS: Print a sentence that interpolates the return value of your square function.
 function square(num) {
-    return `${num}` * `${num}`;
+    var sum = num * num;
+    return `The square of ${num} is ${sum}`;
 }
-var twoSquared = square(2);
-var fourSquared = square(4);
+var square1 = square(2);
+var square2 = square(4);
 
-console.log(twoSquared);
-console.log(fourSquared);
+console.log(square1);
+console.log(square2);
 
 // 5: Write a function named checkStock that satisfies the following interaction pattern:
 // Hint: You will only write one checkStock function that checks the quantity and then prints the corresponding statement.
@@ -56,18 +57,15 @@ function checkStock(num, item) {
     return `${item} - running LOW`;
     }
 }
-var noStock = checkStock(0,"Cheese");
-var stocked = checkStock(4,"Coffee");
-var someStock = checkStock(3,"Tortillas");
+var cheese = checkStock(0, "Cheese");
+var coffee = checkStock(4, "Coffee");
+var tortillas = checkStock(3, "Tortillas");
+var salsa = checkStock(1, "Salsa");
 
-console.log(noStock);
-console.log(stocked);
-console.log(someStock);
-
-console.log(checkStock(4, "Coffee"));
-console.log(checkStock(3, "Tortillas"));
-console.log(checkStock(0, "Cheese"));
-console.log(checkStock(1, "Salsa"));
+console.log(coffee);
+console.log(tortillas);
+console.log(cheese);
+console.log(salsa);
 
 checkStock(4, "Coffee");
 // => "Coffee is stocked"
